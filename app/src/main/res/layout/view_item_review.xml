@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="review"
+            type="com.abkhrr.movieeplot.domain.dto.api.MovieReviewResult" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/author_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            tools:src="@mipmap/ic_launcher_round"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/authorName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            tools:text="iamUsername:"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/lato_bold"
+            android:textSize="16sp"
+            android:text="@{review.author}"
+            app:layout_constraintStart_toEndOf="@+id/author_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/author_image"
+            app:layout_constraintTop_toTopOf="@+id/author_image" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/comment_sections"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxEms="20"
+            android:lineSpacingExtra="8dp"
+            android:layout_marginTop="12dp"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:textColor="#272727"
+            tools:text="The world needed a hero -- it got a hedgehog. Powered with incredible speed, Sonic embraces his new home on Earth -- until he accidentally knocks out the power grid, sparking the attention of uncool evil genius Dr. Robotnik. Now, it's supervillain vs. supersonic in an all-out race across the globe to stop Robotnik from using Sonic's unique power to achieve world domination."
+            android:text="@{review.content}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/authorName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

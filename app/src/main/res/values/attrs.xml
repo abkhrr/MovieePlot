@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AvatarBehavior">
+        <attr name="finalYPosition"             format="dimension" />
+        <attr name="startXPosition"             format="dimension" />
+        <attr name="startToolbarPosition"       format="dimension" />
+        <attr name="startHeight"                format="dimension" />
+        <attr name="finalHeight"                format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="VectorTextView">
+        <attr name="drawableStart"              format="reference" />
+        <attr name="drawableTop"                format="reference" />
+        <attr name="drawableEnd"                format="reference" />
+        <attr name="drawableBottom"             format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ForegroundImageView">
+        <attr name="android:foreground"         format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="currencyEditText">
+        <attr name="groupDivider"               format="string" />
+        <attr name="monetaryDivider"            format="string" />
+        <attr name="locale"                     format="string" />
+        <attr name="showSymbol"                 format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressBar">
+        <attr name="min"                        format="integer" />
+        <attr name="max"                        format="integer" />
+        <attr name="progressValue"              format="integer" />
+        <attr name="progressbarColorFirst"      format="color" />
+        <attr name="progressbarColorSec"        format="color" />
+        <attr name="progressBarThickness"       format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="WidgetStateOptionView">
+        <attr name="disabledTextColor" format="color"/>
+        <attr name="enabledTextColor" format="color"/>
+        <attr name="disabledDrawable" format="reference"/>
+        <attr name="enabledDrawable" format="reference"/>
+        <attr name="title" format="string"/>
+        <attr name="description" format="string"/>
+    </declare-styleable>
+</resources>

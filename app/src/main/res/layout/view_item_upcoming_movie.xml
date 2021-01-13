@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="upcomingMovie"
+            type="com.abkhrr.movieeplot.domain.dto.api.UpcomingMovieResult" />
+
+        <variable
+            name="listener"
+            type="com.abkhrr.movieeplot.presentation.main.listener.upcoming_movie.UpcomingMovieItemClick" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> listener.onMovieClick()}">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/upcomingImage"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/upcomingMovieTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            tools:text="The Story Of Covid-19 In World"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#47525E"
+            android:textSize="16sp"
+            android:maxLines="2"
+            android:maxEms="8"
+            android:padding="10dp"
+            android:lineSpacingExtra="8dp"
+            android:text="@{String.valueOf(upcomingMovie.title)}"
+            app:layout_constraintStart_toStartOf="@+id/upcomingImage"
+            app:layout_constraintEnd_toEndOf="@+id/upcomingImage"
+            app:layout_constraintTop_toBottomOf="@+id/upcomingImage"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

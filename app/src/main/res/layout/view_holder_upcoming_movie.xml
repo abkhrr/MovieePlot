@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/APP_MAIN_BACKGROUND">
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="4dp"
+            android:background="#4B65FF"
+            android:layout_marginTop="10dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/recyclerViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/upcoming_movie"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical"
+            android:textSize="25sp"
+            android:textColor="#47525E"
+            android:fontFamily="@font/lato_bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/view_collection_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:overScrollMode="ifContentScrolls"
+            android:layout_below="@+id/recyclerViewTitle"/>
+
+    </RelativeLayout>
+
+</layout>

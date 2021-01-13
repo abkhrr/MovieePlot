@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.abkhrr.movieeplot.presentation.main.viewmodel.SharedViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/APP_MAIN_BACKGROUND"
+        android:padding="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".presentation.main.fragment.intro.FragmentIntro">
+
+        <include
+            android:id="@+id/firstLayoutIntro"
+            layout="@layout/intro_first_layout" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtTextUsername"
+                android:layout_width="200dp"
+                android:padding="10dp"
+                android:drawablePadding="5dp"
+                android:background="@drawable/edit_text_intro_bg"
+                android:drawableStart="@drawable/ic_arrow_forward"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iconChecked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:visibility="invisible"
+                android:src="@drawable/ic_check_green" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/error_intro_output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/error_intro"
+            android:visibility="gone"
+            android:maxEms="10"
+            android:textSize="18sp"
+            android:textColor="@android:color/holo_red_light"/>
+
+        <include
+            android:id="@+id/second_layout_intro"
+            android:visibility="gone"
+            layout="@layout/second_layout_intro" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>
